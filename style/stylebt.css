@@ -24,7 +24,32 @@ a{
 }
 
 @keyframes wiggle {
- 0% {transform: translate(2px 0);}
- 50% {transform: translate(-2px 0);}
- 100% {transform: translate(2px 0);}   
+ 0% {transform: translate(40px,0);}
+ 50% {transform: translate(-40px ,0);}
+ 100% {transform: translate(40px ,0);}   
 }
+
+.shake a:hover{
+    animation: shake 75ms infinite;
+    animation-timing-function: linear;;
+}
+
+@keyframes shake {
+ 0% {transform: rotate(0.5deg);} 
+ 50% {transform: rotate(-0.5deg);}
+ 100% {transform: rotate(0.5deg);} 
+}
+
+.pulse a:hover{
+    animation: pulse 1s infinite;
+    animation-timing-function: transform;
+}
+
+@keyframes pulse {
+ 0% {transform: scale(1);}
+ 50% {transform: scale(1.1);}} 
+
+ .zoom a:hover{
+    transform: scale(100.9);
+    transition: all ease 500ms;
+ }
